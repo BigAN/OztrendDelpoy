@@ -1,0 +1,12 @@
+{% load i18n mezzanine_tags future %}
+{% ifinstalled cartridge.shop %} | {% endifinstalled %}
+{% if request.user.is_authenticated %}
+	<span class="ico--profile rounded-shadow"><img class="image" src="{{ STATIC_URL }}img/profile_placeholder-avatar-small.png" alt="Profile Image"></span>
+    <a href="{% url "profile_update" %}">{% trans "My Account" %}</a> |
+    <a href="{{ settings.LOGOUT_URL }}?next={{ request.path }}"
+        >{% trans "Log out" %}</a>
+{% else %}
+    <span class="ico--profile rounded-shadow"><img class="image" src="{{ STATIC_URL }}img/profile_placeholder-avatar-small.png" alt="Profile Image"></span>
+    <a href="{% url "login" %}?next={{ request.path }}">
+    {% trans "Log in" %}</a>
+{% endif %}

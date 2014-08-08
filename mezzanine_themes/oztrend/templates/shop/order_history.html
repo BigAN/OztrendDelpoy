@@ -1,0 +1,159 @@
+{% extends "shop/base.html" %}
+{% load mezzanine_tags shop_tags i18n future %}
+
+{% block meta_title %}{% trans "Order History" %}{% endblock %}
+{% block title %}{% trans "Order History" %}{% endblock %}
+
+{% block breadcrumb_menu %}
+{{ block.super }}
+<li>{% trans "Order History" %}</li>
+{% endblock %}
+
+{% block main %}
+<div class="lengend">
+    <span class="glyphicon glyphicon-calendar"></span>
+    My  Order History
+</div>
+
+{% if orders %}
+
+    {% for order in orders %}
+    <!-- {{order}} -->
+        {% for item,order in order.items %}
+            <!-- {{ value.time }} -->
+            {% ifequal item "order" %}
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pull-left"> 
+            <div class="panel panel-default checkout-panel">
+            <div class="panel-body">
+                <legend><p class="text-left">{% trans "Order ID: " %} {{order.id}}</p></legend>
+                <p>{% trans "Ordered" %}</p> 
+                <h3>{{order.time}} </h3>
+                <a href="{% url "page" "shop" %}">{% trans "View Details" %} </a>
+                
+                <p class="text-left">{% trans "Recipients: " %} {{order.billing_detail_first_name}} &nbsp;{{order.billing_detail_last_name}}</p>
+                <p class="text-left">{% trans "Number of shippments: " %} {{order.item_total}}</p>
+                
+                <p class="text-left">{% trans "Paid: " %} {{ order.total|currency }}</p> 
+
+
+                <p class="text-left">{% trans "Address: " %} {{order.shipping_detail_country}}{{order.shipping_detail_state}}{{order.shipping_detail_city}}{{order.shipping_detail_street}}</p>
+                
+                <h4>Order Status(shipped or under processing):</h4>
+                {% ifequal order.status 2 %}
+                     <button type="button" class="btn btn-warning btn-sm">
+                        shipped
+                    </button>
+                {% else %}
+                     <button type="button" class="btn btn-default btn-sm">
+                        underprocessing
+                    </button>
+                {% endifequal%}
+               <!--  <button type="button" class="btn btn-default btn-sm">
+                 shipped
+                </button>
+                <button type="button" class="btn btn-warning btn-sm">
+                <span class="glyphicon glyphicon-star"></span> underprocessing
+                </button> -->
+                <br>
+                <br>
+                <br>
+                
+                
+                <a class="btn btn-default btn-sm"  href="{% url "shop_order_resendEmail" order.id %}">{% trans "Resend" %}</a>  <a class="btn btn-default btn-sm" target="_blank" href="{% url "shop_invoice" order.id %}">{% trans "View invoice in your browser" %}</a>  <a class="btn btn-default btn-sm" href="{% url "shop_invoice" order.id %}?format=pdf">{% trans "Download PDF invoice" %}</a>
+            </div>
+            </div></div>
+            {%endifequal%}
+            <!-- {{ value.time }} -->
+            {% ifequal item "products" %}
+
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 pull-right"> 
+            <div class="panel panel-default checkout-panel">
+            <div class="panel-body">
+                <legend><p class="text-left">{% trans "Order Details" %}</p></legend>
+
+                <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th colspan="2" class="left">{% trans "Item" %}</th>
+<!--                    <th class="left">Vairation</th> -->
+                    <th>{% trans "Unit Price" %}</th>
+                    <th class="center">{% trans "Qty" %}</th>
+                    <th>{% trans "Price" %}</th>
+                    <th class="center">{% trans "Description" %}</th>
+<!--                    <th class="center">{% trans "option" %}</th> -->
+                    
+                </tr>
+                </thead>
+                <tbody>
+
+                {% for items in order %}
+               
+                 
+                <tr>
+                    {% for item,value in items.items %}
+                     
+                    {% ifequal item "product" %}
+                    <td colspan="2" class="left">
+                        <a href="{{ value.get_absolute_url }}">
+                        <img alt="{{ value.description }}" style="float:left;" src="{{ MEDIA_URL }}{% thumbnail value.image 90 120 %}">
+                        </a>
+                    <!--  <p>{{value.title}}</p> -->
+                        <p><a>{{ value.options.0 }} {{ value.options.1 }} {{ value.options.2 }} {{ value.options.3 }} </a></p>
+                    </td>
+                     
+                    {% endifequal %}
+                    {% endfor %}
+
+                    {% for item,value in items.items %}
+                    {% ifequal item "order_item" %} 
+                    <td>{{ value.unit_price|currency }}</td>  
+                    <td class="quantity">{{value.quantity}} </td>
+                    <td>{{ value.total_price|currency }}</td>   
+                    <td class="center">  {{value.description}}</td>                    
+<!--                      <td>{{value.quantity}} </td>
+                     <td>   {% widthratio value.total_price 1 value.quantity|add:"0" %}</td> 
+
+                     <td>  {{value.description}}</td>  -->
+                     {% endifequal %} 
+                    
+                  
+                     
+                {% endfor %}
+  
+
+
+                {% endfor %}
+                </tr>  
+                </tbody>
+                </table> 
+               
+            </div>
+            </div>               
+            </div> 
+
+            {%endifequal%}
+
+        {% endfor %}   
+            <div class="insert"/>
+    {% endfor %}
+
+
+{% pagination_for orders %}
+
+{% else %}
+
+<div class="lengend">
+    <span class="glyphicon glyphicon-calendar"></span>
+    My  Order History
+</div>
+<div class="panel panel-default checkout-panel">
+<div class="panel-body">
+<div class ="alert-empty-cart"><p>{% trans "You have not ordered anything from us yet." %}</p></div>
+</div>
+</div>
+<br>
+<br>
+<p><a class="btn btn-large btn-primary" href="/">{% trans "Continue Shopping" %}</a></p>
+{% endif %}
+
+{% endblock %}

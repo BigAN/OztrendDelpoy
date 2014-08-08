@@ -1,0 +1,620 @@
+/* Html */
+
+body {
+    background: url(/static/img/bg.png) #cccccc;
+    font: Arial,Verdana,Helvetica,Sans-serif;
+    color: #616161;
+}
+/*set the background of the main part of the page into certain colour*/
+.container {
+
+    background: transparent;;
+    padding: 10px 40px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+h6 {
+    text-transform: none;
+}
+
+/* set the sticky menu */
+#sticker {
+      background: #bada55;
+      color: white;
+      width: 140px;
+      font-family: Droid Sans;
+      font-size: 40px;
+      line-height: 1.6em;
+      font-weight: bold;
+      text-align: center;
+      padding: 13px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.2);
+      border-radius: 10px;
+      float:left;
+      z-index: 10;
+      margin-left: -14px;
+    }
+#wrapper {
+      width:700px;
+      margin:0 auto;
+}
+
+/* Header */
+
+#header {
+    width: 100%;
+    margin-top: 0px;
+    padding-bottom: 4px;
+    background: #080064;; /*set background color*/
+}
+#user-welcome {
+    color:#A5A5A5
+}
+
+#header #user-info #user-welcome a{
+    color: #FFFFFF;
+}
+#header #user-info #user-links .ico--profile {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+    margin-bottom: 2px;
+    height: 24px;
+
+}
+#header #user-info #user-links .rounded-shadow {
+    overflow: hidden;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
+}
+#header #user-info #user-links a{
+    color: #AEAAAA;
+    /*font-family: Papyrus, fantasy; */ /*"Lato",Arial,Helvetica,sans-serif; old version*/
+    /*font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; */
+    /*font-family: "Arial Black", "Arial Bold", Gadget, sans-serif; */
+    /*font-family: Monaco, Consolas, "Lucida Console", monospace; */
+    /*font-family: Copperplate, "Copperplate Gothic Light", fantasy; */
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif; 
+    font-size: 18px;
+   /* font-weight:bolder; */
+    font-weight: 1000;
+    letter-spacing: 1px;
+    line-height: 26px;
+    padding :2px;
+}
+#header #user-info #user-links a:hover{
+    color: #7e7e7e;
+   /* font-family: Monaco, Consolas, "Lucida Console", monospace; *//* "Lato",Arial,Helvetica,sans-serif;*/
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 18px;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    line-height: 26px;
+    padding: 2px;
+
+}
+#header #user-info #user-links .link .ico{
+    display: inline-block;
+    margin-bottom: -2px;
+    padding-right: 8px;
+    width: 20px;
+    height: 13px;
+    background-position: 0 -32px;
+    background-repeat: no-repeat;
+    background-image: url("../img/header-footer-2013.png");
+}
+
+#header #user-info #user-links .link .count-box {
+/*    display: block;
+    position: relative;
+    padding: 1px;
+    margin: 1px 3px 0 12px;
+    float: left;
+    padding: 1px;
+    background: url("../img/border-pink-50.png");
+    */
+    display: inline-block;
+    padding: 1.5px 1.5px;
+    margin: 8px 3px 8px 4px;
+/*    margin-bottom: -2px;
+    padding-right: 8px; */
+ /*   background-position: 0 -32px;
+    background-repeat: no-repeat; */
+    background: url("../img/border-pink-50.png");
+}
+#header #user-info #user-links .link .count-box .count-number{
+    display: block;
+    position: relative;
+    padding: 0 8px;
+    color: #fff;
+    font-size: .8em;
+    font-weight: bold;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid #030000;
+}
+
+#site-logo {
+    float: left;
+    margin-left: 4px;
+    margin-right: 6px;
+}
+
+#site-logo img {
+    box-shadow: 0 0 0px #BBBBBB;
+}
+
+#site-tagline {
+    /*font-family: Papyrus, fantasy; */
+  /*  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif; */
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ABA2A2;
+
+}
+#site-titles {
+    margin-top: 12px;
+    margin-left: 4px;
+}
+
+#site-title {
+    font-family: Papyrus, fantasy;
+    font-size: 38px;
+    line-height: 32px;
+    color: #ffffff;
+}
+
+#site-title a {
+    color: #FFFFFF;
+}
+
+#site-title a:hover {
+    text-decoration: none;
+    color: #333333;
+}
+
+#user-info {
+    text-align: right;
+}
+#user-welcome {
+  /*  font-family: Monaco, Consolas, "Lucida Console", monospace; */
+ /*  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; */
+   /* font-family: Monaco, Consolas, "Lucida Console", monospace; */
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    font-size: 18px;
+    color:#ffffff;
+}
+
+.form-search {
+    margin: 4px 0 4px;
+}
+/* carousel */
+
+.bs-example {
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #fff;
+  border-width: 1px;
+  border-color: #ddd;
+  border-radius: 4px 4px 0 0;
+  box-shadow: none;
+  position: relative;
+  /*padding: 45px 15px 15px;*/
+  margin: 0 -15px 15px;
+  border-style: solid;
+
+}
+/* Echo out a label for the example */
+/*.bs-example:after {
+  content: "Example";
+  position: absolute;
+  top:  15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}*/
+.bs-example + .highlight {
+  margin: -15px -15px 15px;
+  border-radius: 0;
+  border-width: 0 0 1px;
+}
+/* Navigation */
+
+#navigation {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.58);
+    background: #F0F0F0;
+    text-align:center;
+
+}
+
+.nav {
+    margin-bottom: 0px;
+}
+
+.nav-tabs {
+    border-bottom: 0px;
+    margin-left: -35px;
+}
+
+.nav-tabs,
+.nav-tabs > li {
+    margin-bottom: 0px;
+    padding: 0;
+    list-style: none;
+    text-align:center;
+}
+.nav-tabs,
+.nav-tabs > li,
+.nav-tabs > a {
+    /* table-caption inline-block; */
+    display: table-caption;
+    display: -moz-inline-stack;
+    *display: inline;
+    zoom: 1;
+}
+
+
+
+
+.nav-tabs > li > a {
+    font-family: Cursive;/*Papyrus, fantasy;*/
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    line-height: 18px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+
+}
+
+/*
+.nav-tabs > li > a:focus, 
+.nav-tabs > li > a:hover { 
+    background-color: black; 
+    color: black; 
+} 
+*/
+/* set active item to darkgreen */ 
+/*
+.nav-tabs > li > .active > a, 
+.nav-tabs > li > .active > a:hover, 
+.nav-tabs > li > .active > a:focus { 
+
+    background-color: black; 
+    color: black; 
+} 
+*/
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #FFFFFF;
+    cursor: default;
+    background-color: #929292;
+    border: 2px solid #C0C0C0;
+}
+}
+
+.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu {
+    border-width: 1px;
+    margin-top: 0px;
+
+}
+.dropdown-menu {
+    font-family: Papyrus, fantasy;
+    background-color: #FFE6E6;
+}
+.dropdown-menu > li > a {
+    font-family: Papyrus, fantasy;
+    color: #7E2424;   
+}
+
+
+.navbar-inner {
+    text-align:center;
+}
+
+
+
+.bulletinslide {
+    width: 100%;
+
+}
+.bulletincarousel {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: -15px;
+}
+.bulletinslide .insidecarousel {
+    width: 100%;
+}
+.bulletinsilde .bulletin {
+    width: 100%
+}
+
+/* Breadcrumb */
+
+.breadcrumb-custom {
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-bottom: 10px;
+}
+
+.breadcrumb-custom li {
+    display: inline-block;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
+.breadcrumb-custom .divider {
+    margin: 0 5px;
+    color: #999999;
+}
+/* main product list*/
+.product-list{
+/*    border-left: 1px solid #ddd;*/
+    border-right:1px solid #ddd;
+}
+/*hot sale banner*/
+.hotbanner{
+    border-bottom: 1px solid #FF7676;
+    background-color: #FF8C8C;
+    text-align: center;
+    colour:#cccccc;
+    font-size: 18px;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    padding-top: 4px;
+    margin-bottom: 6px;
+}
+/* sale banner */
+.salebanner{
+    border-bottom: 1px solid #C3C4C5;
+    background-color: #DFDFDF;
+    text-align: center;
+    colour:#cccccc;
+    font-size: 18px;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    padding-top: 4px;
+    margin-bottom: 6px;
+}
+.prebanner{
+    border-bottom: 1px solid #8FAAFC;
+    background-color: #93C2FF;
+    text-align: center;
+    colour:#cccccc;
+    font-size: 18px;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    padding-top: 4px;
+    margin-bottom: 6px;
+}
+/* set the hotlist product height */
+.hotlist .product-thumb {
+/*    width: 250px; */
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 180px;
+
+
+}
+
+
+.hotlist .caption {
+    margin-top: -70px;
+    background: #FF9E9E;
+
+
+    z-index: 10;
+}
+
+.hotlist .product-thumb h6 {
+color: #000;
+font-size: 20px;
+font-weight: 1300;
+height: 20px;
+margin: 10px 0 5px 0;
+border-bottom: 1px dashed #ddd;
+z-index: 9;
+}
+
+.hotlist .product-thumb .old-price {
+height: 7px;
+}
+
+.hotlist .product-thumb .coming-soon {
+  height: 7px;
+}
+
+.prelist .product-thumb {
+/*    width: 250px; */
+    height: 180px;
+}
+
+.prelist .caption {
+    margin-top: -60px;
+    background: #cccccc;
+
+    z-index: 10;
+}
+.prelist .product-thumb h6 {
+color: #777;
+font-size: 20px;
+font-weight: bold;
+height: 20px;
+margin: 10px 0 5px 0;
+border-bottom: 1px dashed #ddd;
+z-index: 9;
+}
+
+.prelist .product-thumb .old-price {
+height: 7px;
+}
+.prelist .product-thumb .coming-soon {
+  height: 7px;
+}
+/* set the price line-through */
+/*
+.hotlist .caption .price-info {
+    margin-top: -150px;
+    margin-left: -19px;
+    margin-right: -19px;
+    background: #cccccc;
+    opacity:0.3;
+    filter: alpha(opacity=30);
+    z-index: 9;
+
+}
+.hotlist .caption h6{
+    margin-top: -60px;
+    background: #cccccc;
+    opacity:0.3;
+    filter: alpha(opacity=30);
+    z-index: 9;
+}
+.commonlist {
+
+}
+.prelist .product-thumb {
+    height: 200px;
+}
+.prelist .caption .price-info {
+    margin-top: -150px;
+    margin-left: -18px;
+    margin-right: -18px;
+    background: #cccccc;
+    opacity:0.3;
+    filter: alpha(opacity=30);
+    z-index: 9;
+
+}
+.prelist .caption h6{
+    margin-top: -60px;
+    background: #cccccc;
+    opacity:0.3;
+    filter: alpha(opacity=30);
+    z-index: 9;
+}
+*/
+/* Footer */
+.nav-footer {
+  display: table;
+  margin: 0 auto;
+}
+.nav-footer > ul {
+  display: inline-block;
+  width: 120px;
+  margin-left: 50px;
+  vertical-align: top;
+}
+.nav-footer > ul > li {
+  padding: 10px 0;
+  font: normal 14px Helvetica, Arial, sans-serif;
+  font-color: rgb(118, 118, 118);
+}
+.nav-footer >ul > li:first-child {
+    font: normal 14px Helvetica, Arial, sans-serif;
+    font-color: rgb(118, 118, 118);
+    padding: 10px 0;
+    text-transform: uppercase;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+}
+
+#footer {
+  background-color: #f9f9f9;
+  border-top: 1px solid #E7E7E7;
+  margin-top: 15px;
+  padding: 15px 0 30px;
+  width: inherit;
+}
+
+#footer .separator {
+  opacity: 0.3;
+  margin: 0 10px;
+}
+.site-info {
+  font-size: 90%;
+  margin-top: 15px;
+  text-align: center;
+}
+#footer-line {
+    color:#666666;
+    text-align: center;}
+#footer-line a {color:#666666; text-decoration:underline;}
+#footer-line .icon-arrow-up {opacity:0.7; margin-left:4px;}
+/* ******************* */
+/* product page */
+
+.a2a_kit {
+    margin-top: 15px;
+}
+/* set the grey area for the summit&update button area */
+/* ******************* */
+/* set the dashed line a little bit lower in the Price&OnSale Price Panel */
+
+#variations li {
+    padding-bottom: 30px;
+    font-size: x-large;
+}
+/* rewrite the font size of the old price except from the cartridge.css */
+#variations .old-price {
+    /*font-size: x-large;*/
+    margin-bottom: 15px;
+    color: black;
+    float: right;
+}
+/* rewrite the font size and the color of the new price except from the cartridge.css */
+#variations .price {
+    font-size: x-large;
+    color:black;
+}
+/* adjust the area of the SAVE FOR LATER AND BUY button area */
+.form-actions {
+    background-color: #F8F8F8;
+    border-top: 1px solid #E7E7E7;
+    padding: 35px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+/* make the button SAVE&BUY a little bit higher */
+/* have functions on the cart page UPDATE CART& RETURN TO CHECKOUT button*/
+/* have functions on the check outpage billing details NEXT button */
+/* have functions on the check outpage payment details NEXT button */
+/* have functions on the check outpage billing/shipping details recheck page BACK&NEXT button */
+/* have functions on the check outpage billing details NEXT button */
+/* have functions on the check outpage billing details NEXT button */
+.btn {
+    float: right;
+    text-align: right;
+    margin-top: -20px;
+}
+/* Product page radio rating button */
+.rating .btn{
+    margin-top: 0px;
+}
+/* main page index page SEARCH button */
+#user-info .btn{
+    margin-left: 5px;
+    margin-top: 0px;
+}
+/* in the product page ,set the summit buttion area */
+.shop-form .form-actions {
+    padding: 20px;
+}
+/* product page make the button higher */
+.shop-form .btn {
+    margin-top: -10px;
+}
+/* cart check out page make the didcount code apply button lower */
+.discount-form .btn {
+    margin-top :-5px;
+    margin-left: 5px;
+}

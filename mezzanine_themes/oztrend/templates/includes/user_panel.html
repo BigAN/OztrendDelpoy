@@ -1,0 +1,26 @@
+{% load mezzanine_tags i18n include_strip future %}
+<div id="user-welcome">
+{% spaceless %}
+{% trans "Welcome" %}{% ifinstalled mezzanine.accounts %},
+{% include_strip "accounts/includes/user_welcome.html" %}{% endifinstalled %}!
+{% endspaceless %}
+</div>
+{% spaceless %}
+<div id="user-links">
+    &nbsp;
+    {% ifinstalled cartridge.shop %}
+        {% load shop_tags %}
+        {% with request.cart.total_quantity as cart_quantity %}
+        <span class="ico--profile rounded-shadow"><img class="image" src="{{ STATIC_URL }}img/shoppingcart.png" alt="Profile Image"></span><a href="{% url "shop_cart" %}" class="link">{% trans "My Cart" %}<span class="count-box"><span class="count-number">
+        {% if cart_quantity %}{{ cart_quantity }}{% else %}0{% endif %}</span></span></a> |
+        {% endwith %}
+        <a href="{% url "shop_wishlist" %}" class="link"><span class='ico' background-image:"{{ STATIC_URL }}img/header-footer-2013.png"></span>{% trans "My Wishlist" %}
+        {% with request.wishlist|length as wishlist_count %}
+        <span class="count-box"><span class="count-number">{% if wishlist_count %}{{ wishlist_count }}{% else %}0{% endif %}</span></span></a>
+        {% endwith %}
+    {% endifinstalled %}
+    {% ifinstalled mezzanine.accounts %}
+        {% include "accounts/includes/user_panel.html" %}
+    {% endifinstalled %}
+</div>
+{% endspaceless %}

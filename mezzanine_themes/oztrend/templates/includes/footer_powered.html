@@ -1,0 +1,20 @@
+{% load mezzanine_tags i18n future %}
+<!--{% trans "Powered by" %}
+<a href="http://mezzanine.jupo.org">Mezzanine</a>{% ifinstalled cartridge.shop %},
+<a href="http://cartridge.jupo.org">Cartridge</a>{% endifinstalled %}
+{% trans "and" %}
+<a href="http://www.djangoproject.com">Django</a>
+<span class="separator">|</span>
+{% trans "Theme by" %} <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>
+-->
+{% trans "ABN: 49168047014" %}
+<!--<span class="separator">|</span>
+{% trans "Address: 17 Huegill st, Calamvale 4116" %}-->
+<span class="separator">|</span>
+{% trans "Email: oztrend2018@gmail.com" %}
+<span class="separator">|</span>
+{% trans "Postal Address: PO BOX 1176 Sunnybank Hills QLD 4109" %}
+{% ifinstalled mezzanine.mobile %}
+<span class="separator">|</span>
+<a href="{% url "set_device" "mobile" %}?next={{ request.path }}">{% trans "View Mobile Site" %}</a>
+{% endifinstalled %}
