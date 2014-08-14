@@ -150,6 +150,7 @@ MERCHANT_SETTINGS = {
     }
 }
 
+SHOP_PRODUCT_SORT_OPTIONS=(('Recently added', '-date_added'), ('Least expensive', 'unit_price'))
 # Setting to turn on featured images for blog posts. Defaults to False.
 #
 # BLOG_USE_FEATURED_IMAGE = True
@@ -172,20 +173,20 @@ ADMINS = (
 
 MANAGERS = ADMINS
 EMAIL_USE_TLS = True
-# EMAIL_HOST = 'smtp-mail.outlook.com'
-EMAIL_HOST='smtp.gmail.com'
+EMAIL_HOST = 'smtp-mail.outlook.com'
+# EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT = 587   # other ports also tried
 
-EMAIL_HOST_USER = 'oztrend2018@gmail.com'
+# EMAIL_HOST_USER = 'oztrend2018@gmail.com'
 # EMAIL_HOST_PASSWORD = 'kanny0327'
-EMAIL_HOST_PASSWORD = 'prqfgkbpfbpvanhp'
-
+# EMAIL_HOST_PASSWORD = 'prqfgkbpfbpvanhp'
+# SHOP_PRODUCT_SORT_OPTIONS=["Recently added","Least expensive"]
 # EMAIL_HOST_USER = 'ddongjian0000@gmail.com'
 # EMAIL_HOST_PASSWORD = 'yczoeruvxdqshowk'
-# EMAIL_HOST_USER = 'oztrend2018@outlook.com'
-# EMAIL_HOST_PASSWORD = 'angel1988812'
-SHOP_ORDER_FROM_EMAIL='oztrend2018@gmail.com'
-# SHOP_ORDER_FROM_EMAIL='oztrend2018@outlook.com'
+EMAIL_HOST_USER = 'oztrend2018@outlook.com'
+EMAIL_HOST_PASSWORD = 'kanny0327'
+# SHOP_ORDER_FROM_EMAIL='oztrend2018@gmail.com'
+SHOP_ORDER_FROM_EMAIL='oztrend2018@outlook.com'
 # 
 # SHOP_ORDER_FROM_EMAIL='ddongjian0000@gmail.com'
 
