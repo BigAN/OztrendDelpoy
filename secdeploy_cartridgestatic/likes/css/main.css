@@ -1,0 +1,106 @@
+
+
+.icon-watch-stats-like {
+	top: -1px;
+	background: no-repeat url(/static/img/www-hitchhiker-vflx0B2nM.webp) -6px -49px;
+	width: 20px;
+	height: 20px;
+	background-size: auto;
+	margin-top: -3px;
+	margin-right: 4px;
+
+}
+
+
+.totalvotes{
+	font-size: 18px;
+	font-color: #C4D0E9;
+
+	opacity: .8;
+	filter: alpha(opacity=80);
+}
+
+.alreadylikes {
+	font-size: 18px;
+	font-color: #C4D0E9;
+	background-color: #C4D0E9;
+	font-family: cursive;
+}
+
+
+
+
+#watch-like.yt-uix-button-toggled, #watch-dislike.yt-uix-button-toggled {
+	opacity: .8;
+	filter: alpha(opacity=80);
+}
+
+#watch-like.yt-uix-button {
+	padding: 0 7px;
+}
+
+#watch7-sentiment-actions .yt-uix-button {
+	margin-right: 10px;
+	border-right-style: solid;
+	border-radius: 2px;
+}
+
+.yt-uix-button-text, .yt-uix-button-text {
+	border: solid 1px transparent;
+	outline: 0;
+	background: none;
+	color: #333;
+	box-shadow: none;
+}
+.totalbutton {
+display: inline-block;
+height: 28px;
+border: solid 1px #C4D0E9;
+background: #A5CFE7;
+padding: 0 10px;
+outline: 0;
+font-weight: bold;
+text-decoration: none;
+white-space: nowrap;
+word-wrap: normal;
+line-height: normal;
+vertical-align: middle;
+cursor: pointer;
+border-radius: 5px;
+box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+opacity: .8;
+f
+}
+
+.yt-uix-button {
+display: inline-block;
+height: 28px;
+border: solid 1px #C4D0E9;
+background: #C9CACA;
+padding: 0 10px;
+outline: 0;
+font-weight: bold;
+text-decoration: none;
+white-space: nowrap;
+word-wrap: normal;
+line-height: normal;
+vertical-align: middle;
+cursor: pointer;
+border-radius: 5px;
+box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+opacity: .8;
+filter: alpha(opacity=80);
+
+}
+.yt-uix-button-icon-wrapper {
+	margin-bottom: 5px;
+}
+/* .actionable .yt-uix-button.yt-uix-button-toggled  */
+.yt-uix-button-icon-watch-like {
+background: no-repeat url(/static/img/www-hitchhiker-vflx0B2nM.webp) -71px -659px;
+background-size: auto;
+	width: 16px;
+	height: 18px;
+	margin-top: 2px;
+
+}
